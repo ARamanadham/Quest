@@ -20,3 +20,11 @@ Features:
 **Communication Pipe**
 I used WebSockets and ZeroMQ to create a communication pipe between the frontend application and the python scripts. 
 The frontend JS scripts send a message via WebSockets to this bridge server, which communicates with the appropriate python scripts via ZeroMQ.
+
+
+**Running the program**
+1) Download this repository
+2) Python3 [script.py] from Microservices folder
+3) Node bridge_server.js from JS folder
+4) Start a server using 'Python3 -m http.server 8000'
+5) Visit localhost:8000
