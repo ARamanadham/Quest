@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manage Quests</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="addQuests">
+        <div class="container">
+            <h1>Quest Planner</h1>
+
+            <div class="nav-links">
+                <a href="quest_home.html">Quest Home</a>
+                <a href="main.html">Begin Questing</a>
+                <a href="quest_log.html">Quest Logs</a>
+            </div>
+
+            <form id="questForm">
+                <input type="hidden" id="questId">
+                <label for="questTitle">Quest:</label>
+                <input type="text" id="questTitle" name="questTitle" required>
+
+                <label for="questDesc">Description:</label>
+                <textarea id="questDesc" name="questDesc"></textarea>
+
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate">
+
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <button type="submit" id="submitButton">Add Quest</button>
+            </form>
+
+            <div class="quest-list" id="questList"></div>
+        </div>
+        <script src="/js/questplan.js"></script>
+    </body>
+</html>

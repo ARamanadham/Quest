@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quest Login/Register</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="loginPage">
+        <div class="form-container">
+            <div id="loginForm">
+                <h2>Login</h2>
+                <form id="login">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="toggle-form" onclick="toggleForm()">Don't have an account? Register</p>
+            </div>
+            
+            <div id="registerForm" class="hidden">
+                <h2>Register</h2>
+                <form id="register">
+                    <input type="text" id="registerUsername" placeholder="Username" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="button" onclick="generateCredentials()">Generate Credentials</button>
+                    <div id="generatePassword" style="display: none;">
+                        <p>Generated Password: <span id="passwordDisplay"></span></p>
+                        <button type="button" onclick="copyPassword()">Copy Password</button>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p class="toggle-form" onclick="toggleForm()">Already have an account? Login</p>
+            </div>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+</html>
